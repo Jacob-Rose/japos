@@ -10,12 +10,10 @@ const createWindow = () => {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
-    
   })
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
-
   // add a new option to the main windows menu bar to select a directory
   const { Menu } = require('electron')
   const menu = Menu.buildFromTemplate([
@@ -35,8 +33,7 @@ const createWindow = () => {
     }
   ])
   mainWindow.setMenu(menu)
-
-
+  
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -64,7 +61,6 @@ app.on('window-all-closed', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-
 function loadProject()
 {
   const zlib = require('zlib');
@@ -83,6 +79,11 @@ function saveDirectory()
     properties: ['openDirectory']
   })
 
+  if(result.length == 0)
+  {
+    return
+  }
+
   // save the directory to a file
   const Store = require('electron-store');
   store = new Store();
@@ -91,10 +92,11 @@ function saveDirectory()
   
   //store.set('directory', );
   console.log(store.get('directory'));
-
-
 }
 
 // make a function that loads all subdirectories in a directory
 // make a function that loads all files in a directory
-function loadProjectsInDirectory()
+function loadProjectsInDirectory(directoryPath)
+{
+
+}
