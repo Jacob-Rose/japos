@@ -103,10 +103,6 @@ const createWindow = () => {
       label: 'File',
       submenu: [
         {
-          label: 'Open Project Folder',
-          click() { openProjectFolder(); }
-        },
-        {
           label: 'Preferences',
           click() {
             if (mainWindow) {
