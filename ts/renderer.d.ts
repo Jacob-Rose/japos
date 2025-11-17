@@ -8,6 +8,9 @@ export interface ElectronAPI {
   onOpenPreferences: (callback: () => void) => void;
   getPreferences: () => Promise<UserPreferences>;
   setPreferences: (preferences: UserPreferences) => Promise<UserPreferences>;
+  selectDirectory: () => Promise<string | null>;
+  onSafeModeStatus: (callback: (isSafeMode: boolean) => void) => void;
+  manualLoadProjects: () => Promise<boolean>;
 }
 
 declare global {

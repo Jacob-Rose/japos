@@ -12,3 +12,10 @@ export interface ProjectInfo {
   lastModified: Date;
   longestTrackLength?: number; // in seconds
 }
+
+export interface ProjectGroup {
+  directoryPath: string;
+  projectName: string; // Name derived from directory or first project
+  versions: ProjectInfo[];
+  selectedVersionIndex: number; // For UI state
+}
