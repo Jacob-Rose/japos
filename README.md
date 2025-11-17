@@ -28,9 +28,11 @@ TAPOS is a modern desktop application built with Electron and TypeScript that he
 
 ## Screenshots
 
-<!-- TODO: Add screenshots here -->
+### Main Interface
+![TAPOS Main Interface](img/example-breakdown.png)
 
-*Screenshots coming soon*
+### Preferences
+![TAPOS Preferences](img/preferences.png)
 
 ## Installation
 
@@ -63,10 +65,14 @@ npm start
 
 ## Usage
 
-1. **Open a project folder**: Go to `File > Open Project Folder` and select a directory containing Ableton projects
+1. **Add project directories**: Go to `File > Preferences` and click "Add Directory" to select folders containing Ableton projects
 2. **Browse projects**: Scroll through the grid to see all your projects with their track breakdowns
-3. **Customize view**: Open `File > Preferences` to hide return tracks or master tracks
-4. **Click on cards**: (Future) Click project cards to see more details or open in Ableton
+3. **Customize view**: In Preferences, you can:
+   - Enable/disable individual directories
+   - Toggle recursive scanning per directory
+   - Hide return tracks or master tracks
+4. **Version selection**: Projects with multiple `.als` files in the same folder are grouped with a version selector
+5. **Safe mode**: Launch with `npm run safe` to manually control when projects load
 
 ## Development
 
