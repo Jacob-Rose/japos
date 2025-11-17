@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Safe Mode Overlay -->
+    <div id="safe-mode-overlay" class="safe-mode-overlay" style="display: none;">
+        <div class="safe-mode-content">
+            <h2>Safe Mode</h2>
+            <p>Auto-loading is disabled in safe mode.</p>
+            <p>Click the button below to manually load projects.</p>
+            <button id="manual-load-btn" class="btn-primary btn-large">Load Projects</button>
+        </div>
+    </div>
+
     <div class="container">
         <header>
             <h1>TAPOS - Ableton Project Manager</h1>
@@ -37,6 +47,16 @@
                 <button id="close-preferences" class="close-btn">&times;</button>
             </div>
             <div class="modal-body">
+                <div class="preference-section">
+                    <h3>Project Directories</h3>
+                    <div class="preference-item">
+                        <button id="add-directory-btn" class="btn-secondary">Add Directory</button>
+                    </div>
+                    <div id="directories-list" class="directories-list">
+                        <!-- Directory items will be dynamically inserted here -->
+                    </div>
+                </div>
+
                 <div class="preference-section">
                     <h3>Track Visibility</h3>
                     <div class="preference-item">

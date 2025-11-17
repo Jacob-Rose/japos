@@ -22,6 +22,15 @@ contextBridge.exposeInMainWorld('electronAPI', {
   },
   setPreferences: (preferences: UserPreferences): Promise<UserPreferences> => {
     return ipcRenderer.invoke('set-preferences', preferences);
+  },
+  selectDirectory: (): Promise<string | null> => {
+    return ipcRenderer.invoke('select-directory');
+  },
+  onSafeModeStatus: (callback: (isSafeMode: boolean) => void) => {
+    ipcRenderer.on('safe-mode-status', (_event, isSafeMode) => callback(isSafeMode));
+  },
+  manualLoadProjects: (): Promise<boolean> => {
+    return ipcRenderer.invoke('manual-load-projects');
   }
 });
 

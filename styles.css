@@ -81,6 +81,46 @@ header h1 {
     padding-bottom: 10px;
 }
 
+/* Version selector styles */
+.version-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+}
+
+.version-label {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.version-dropdown {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    color: #333;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.version-dropdown:hover {
+    border-color: #667eea;
+}
+
+.version-dropdown:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
 .project-info {
     margin-bottom: 15px;
     font-size: 0.95em;
@@ -357,4 +397,125 @@ header h1 {
 
 .btn-secondary:hover {
     background: #d0d0d0;
+}
+
+/* Directory list styles */
+.directories-list {
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.directory-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background: #f5f5f5;
+    border-radius: 6px;
+    gap: 10px;
+}
+
+.directory-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #667eea;
+    flex-shrink: 0;
+}
+
+.directory-path {
+    flex: 1;
+    color: #333;
+    font-size: 0.9em;
+    word-break: break-all;
+}
+
+.directory-recursive-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 8px;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #666;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.directory-recursive-label:hover {
+    background: #f0f0f0;
+}
+
+.directory-recursive-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+}
+
+.directory-remove-btn {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.directory-remove-btn:hover {
+    background: #ff5252;
+}
+
+.preference-section {
+    margin-bottom: 25px;
+}
+
+.preference-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Safe Mode Overlay */
+.safe-mode-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(102, 126, 234, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.safe-mode-content {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+}
+
+.safe-mode-content h2 {
+    color: #667eea;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.safe-mode-content p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.btn-large {
+    font-size: 1.2em;
+    padding: 15px 40px;
+    margin-top: 20px;
 }
